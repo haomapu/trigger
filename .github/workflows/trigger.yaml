@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      - feature/*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # your build steps here
+      - name: Trigger downstream workflow
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_B_TOKEN }}
+          repository: haomapu/golang
+          event-type: my-event
+          client-payload: '{"branch": "haomapu"}'
