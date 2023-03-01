@@ -9,7 +9,7 @@ on:
 #     branches:
 #       - main
   repository_dispatch:
-    types: [my-event]
+    types: [golang]
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
     - name: Checkout Services
       uses: actions/checkout@v2
       with: 
-        repository: haomapu/golang
+        repository: haomapu/${{ github.event.client_payload.type }}
         ref: main
         path: ./
     
