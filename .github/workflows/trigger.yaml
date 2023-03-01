@@ -20,7 +20,7 @@ jobs:
     - name: Checkout Services
       uses: actions/checkout@v2
       with: 
-        repository: haomapu/${{ github.event.client_payload.type }}
+        repository: haomapu/${{ github.event.action }}
         ref: main
         path: ./
     
