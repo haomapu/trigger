@@ -21,6 +21,7 @@ jobs:
       uses: actions/checkout@v2
       with: 
         repository: haomapu/${{ github.event.action }}
+        ref: ${{ github.event.client_payload.branches }}
         path: ./
     
     - name: Set up Docker Buildx
