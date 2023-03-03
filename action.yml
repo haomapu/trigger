@@ -54,4 +54,3 @@ jobs:
     - run : |-
         echo Hello
       shell: bash
-version: v1
