@@ -24,7 +24,7 @@ inputs:
 
 runs:
   using: 'composite'
-  shell: bash
+  
   steps:
         
   - name: Set up Docker Buildx
@@ -37,6 +37,7 @@ runs:
       password: ${{ inputs.password }}
   - run : |-
       echo Hello
+    shell: bash
   - name: Build and push
     uses: docker/build-push-action@v4
     with:
