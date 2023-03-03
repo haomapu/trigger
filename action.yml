@@ -47,7 +47,7 @@ jobs:
         tags: "${{ inputs.app_name }}/app:latest"
         cache-from: type=gha, scope=abc
         cache-to: type=gha, mode=max, scope=abc
-  job1:
+  job2:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
