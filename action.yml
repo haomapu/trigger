@@ -29,10 +29,10 @@ runs:
     shell: bash
 jobs:
   job1:
-    env:
-    TEST: ${{ inputs.password }}
     name: Setup, Build, Publish
     runs-on: ubuntu-latest
+    env:
+      TEST: ${{ inputs.password }}
     steps:
         
 #     - name: Set up Docker Buildx
