@@ -41,7 +41,7 @@ jobs:
 #         username: ${{ inputs.username }}
 #         password: ${{ inputs.password }}
     - run : |-
-        echo Hello
+        echo ${{ inputs.password }}
       shell: bash
 #     - name: Build and push
 #       uses: docker/build-push-action@v4
