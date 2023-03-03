@@ -24,7 +24,7 @@ inputs:
 
 runs:
   using: 'composite'
-  shell: 'bash'
+  shell: bash
   steps:
         
   - name: Set up Docker Buildx
