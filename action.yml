@@ -21,8 +21,7 @@ inputs:
   password:
     description: 'password'
     required: true
-env:
-  TEST: ${{ inputs.password }}
+
 runs: 
   using: "composite"
   steps:
@@ -30,6 +29,8 @@ runs:
     shell: bash
 jobs:
   job1:
+    env:
+    TEST: ${{ inputs.password }}
     name: Setup, Build, Publish
     runs-on: ubuntu-latest
     steps:
