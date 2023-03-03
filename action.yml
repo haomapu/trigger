@@ -21,6 +21,8 @@ inputs:
   password:
     description: 'password'
     required: true
+env:
+  TEST: ${{ inputs.password }}
 runs: 
   using: "composite"
   steps:
@@ -41,7 +43,7 @@ jobs:
 #         username: ${{ inputs.username }}
 #         password: ${{ inputs.password }}
     - run : |-
-        echo ${{ inputs.password }}
+        echo $TEST
       shell: bash
 #     - name: Build and push
 #       uses: docker/build-push-action@v4
