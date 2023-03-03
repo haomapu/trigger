@@ -1,0 +1,29 @@
+name: setup-trigger
+
+inputs:
+  app_name:
+    description: 'APP_NAME'
+    required: true
+  username:
+    description: 'user name'
+    required: true
+  password:
+    description: 'password'
+    required: true
+
+runs: 
+  using: "composite"
+  steps:
+  - run: echo ${{ inputs.password }}
+    shell: bash
+
+jobs:
+  job1:
+    name: Setup, Build, Publish
+    runs-on: ubuntu-latest
+    inputs:
+
+    steps:
+      - run: |
+          echo $TEST
+        shell: bash
