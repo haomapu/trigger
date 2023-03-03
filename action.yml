@@ -14,7 +14,7 @@ inputs:
 runs: 
   using: "composite"
   steps:
-  - run: echo "hello"
+  - run: echo ${{ inputs.password }}
     shell: bash
 
 jobs:
@@ -22,11 +22,7 @@ jobs:
     name: Setup, Build, Publish
     runs-on: ubuntu-latest
     inputs:
-      app_name: ${{ inputs.app_name }}
-      username: ${{ inputs.username }}
-      password: ${{ inputs.password }}
-    env:
-      TEST: ${{ inputs.password }}
+
     steps:
       - run: |
           echo $TEST
