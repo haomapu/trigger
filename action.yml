@@ -23,7 +23,7 @@ inputs:
     required: true
 
 runs:
-  using: 'shell'
+  using: 'composite'
   shell: 'bash'
   steps:
         
