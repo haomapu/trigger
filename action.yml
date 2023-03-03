@@ -25,7 +25,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-  
+  - name: Checkout Services
+    uses: actions/checkout@v2
+        
   - name: Set up Docker Buildx
     uses: docker/setup-buildx-action@v2
       
