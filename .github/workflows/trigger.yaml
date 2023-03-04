@@ -28,6 +28,9 @@ jobs:
     name: Setup, Build, Publish
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: action/checkout@v3
+        
       - run: |
-          echo "HEllo world"
+          echo ${{ inputs.app_name }}
         shell: bash
