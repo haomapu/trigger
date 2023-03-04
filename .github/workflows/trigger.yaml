@@ -29,15 +29,14 @@ jobs:
     permissions:
       contents: 'write'
       id-token: 'write'
+      actions: 'write'
+      checks: 'write'
       
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: action/checkout@v2
-        with:
-          repository: haomapu/golang
-          ref: main
-          path: ./
+
       - run: |
           echo ${{ inputs.app_name }}
         shell: bash
