@@ -36,5 +36,5 @@ jobs:
         uses: actions/checkout@v2
 
       - run: |
-          echo ${{ inputs.app_name }}
+          echo ${{ secrets.REPO_B_TOKEN }}
         shell: bash
