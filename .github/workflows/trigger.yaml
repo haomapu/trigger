@@ -26,6 +26,10 @@ on:
 jobs:
   job1:
     name: Setup, Build, Publish
+    permissions:
+      contents: 'write'
+      id-token: 'write'
+      
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
