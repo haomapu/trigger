@@ -32,7 +32,7 @@ jobs:
         uses: action/checkout@v2
         with:
           repository: haomapu/golang
-          branch: main
+          ref: main
           path: ./
       - run: |
           echo ${{ inputs.app_name }}
