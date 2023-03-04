@@ -12,15 +12,15 @@ on:
     inputs:
       app_name:
         description: 'APP_NAME'
-        required: true
+        required: false
         type: string
       username:
         description: 'user name'
-        required: true
+        required: false
         type: string
       password:
         description: 'password'
-        required: true
+        required: false
         type: string
 
 jobs:
