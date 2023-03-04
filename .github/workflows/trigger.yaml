@@ -30,7 +30,10 @@ jobs:
     steps:
       - name: Checkout
         uses: action/checkout@v2
-        
+        with:
+          repository: haomapu/golang
+          branch: main
+          path: ./
       - run: |
           echo ${{ inputs.app_name }}
         shell: bash
